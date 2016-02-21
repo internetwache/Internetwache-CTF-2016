@@ -1,0 +1,53 @@
+{
+    "english": {
+        "frame": {
+            "title": "Internetwache CTF 2016",
+            "toggle": "Toggle navigation",
+            "login": "Sign in",
+            "register": "Register",
+            "logged_in": "Logged in as",
+            "logout": "log out"
+        },
+        "main": {
+            "title": "Internetwache CTF 2016",
+            "text": "Welcome to the first jeopardy CTF hosted by Internetwache"
+        },
+        "about": {
+            "title": "About",
+            "news": "News",
+            "news_text": "News go here",
+            "rules": "Rules",
+            "rules_text": "<ul><li>first</li></ul> go here"
+        },
+        "tasks": {
+            "title": "Tasks"
+        },
+        "task": {
+            "description": "Description",
+            "attachment": "Attachment",
+            "submit": "Submit",
+            "success": "Correct flag!",
+            "failure": "Incorrect flag",
+            "solution_format": "solved by %d",
+            "no_description": "(none)",
+            "placeholder": "IW{insert_flag_here}",
+            "service": "Service"
+        },
+        "scoreboard": {
+            "title": "Scoreboard",
+            "player": "Team",
+            "score": "Score"
+        },
+        "error": {
+            "title": "Error",
+            "unknown": "Unknown error",
+            "login_required": "You need to be logged in to see this page",
+            "invalid_credentials": "Invalid username or password",
+            "already_registered": "This user is already registered",
+            "empty_user": "Empty username is not allowed",
+            "task_not_found": "TBD",
+            "only_during_ctf": "This action is only possible during the CTF",
+            "ctf_over": "CTF is over. Sorry!"   
+        }
+    }
+}

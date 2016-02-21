@@ -1,0 +1,1 @@
+#define FLAG "IW{Y_U_NO_HAZ_FLAG}"

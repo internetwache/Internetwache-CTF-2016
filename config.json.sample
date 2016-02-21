@@ -1,0 +1,16 @@
+{
+    "secret_key": "sdjfhsjdfhkjsdf/&(&/(6sd7f67sdf8932KJSKJDHJDH",
+    
+    "host": "0.0.0.0",
+    "port": 64092,
+    
+    "db": "sqlite:///ctf.db",
+    
+    "language_file": "lang.json",
+    "language": "english",
+
+    "start": 1455966000,
+    "stop": 1456095600,
+
+    "debug": false
+}

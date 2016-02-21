@@ -1,0 +1,39 @@
+Command Classes
+
+% - deals with the integer index
+# - deals with all of the integers
+& - deals with miscellaneous commands
+
+Operator Classes
+
+& - deals with multiplication
++ - deals with addition
+$ - deals with division
+- - deals with subtraction
+@ - deals with outputting text
+* - deals with integer 0
+** - deals with integer 1
+*** - deals with integer 2
+^ - deals with powers
+
+
+Commands[edit]
+%# - adds one to the integer index
+%% - resets the integer index to zero
+%& - the integer that the integer index is pointing to is inputted into the program
+#% - sets all of the integers to one
+## - resets all of the integers to zero
+&& - pauses the program
+&@ - clears the screen
+%++ - adds one to the integer that the integer index is pointing to
+
+Operators[edit]
+* - integer 0
+** - integer 1
+*** - integer 2
+[int]&[int] - integer * integer
+[int]+[int] - integer + integer
+[int]$[int] - integer / integer
+[int]-[int] - integer - integer
+@[int] - outputs the integer as a character (1 = A, 2 = B, ... 26 = Z)
+@@[int] - outputs the integer as an integer

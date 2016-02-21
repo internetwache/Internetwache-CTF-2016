@@ -1,0 +1,1 @@
+cat flag.txt | base64 | od -t o1 > task.txt

@@ -1,0 +1,287 @@
+{"categories": [
+    {"id": 0, "name": "Misc.", "short_name": "Misc", "tasks": [
+        {
+        "id": 0, 
+        "row": 0,
+        "name": "The hidden message", 
+        "score": "50",
+        "flag": "IW{N0_0ne_can_st0p_y0u}",
+        "desc": "My friend really can't remember passwords. So he uses some kind of obfuscation. Can you restore the plaintext?",
+        "file": "misc50.zip"
+        },
+        {
+        "id": 10, 
+        "row": 1,
+        "name": "Quick Run", 
+        "score": "60",
+        "flag": "IW{QR_C0DES_RUL3}",
+        "desc": "Someone sent me a file with white and black rectangles. I don't know how to read it. Can you help me?",
+        "file": "misc60.zip"
+        },
+        {
+        "id": 20, 
+        "row": 2,
+        "name": "Rock with the wired shark!", 
+        "score": "70",
+        "flag": "IW{HTTP_BASIC_AUTH_IS_EASY}",
+        "desc": "Sniffing traffic is fun. I saw a wired shark. Isn't that strange?",
+        "file": "misc70.zip"
+        },
+        {
+        "id": 30, 
+        "row": 3,
+        "name": "404 Flag not found", 
+        "score": "80",
+        "flag": "IW{DNS_HACKS}",
+        "desc": "I tried to download the flag, but somehow received only 404 errors :( Hint: The last step is to look for flag pattern.",
+        "file": "misc80.zip"
+        },
+        {
+        "id": 40, 
+        "row": 4,
+        "name": "BarParty", 
+        "score": "90",
+        "flag": "IW{Bar_B4r_C0d3s}",
+        "desc": "Can you read the barcodes?",
+        "file": "misc90.zip"
+        }
+    ]},
+    {"id": 1, "name": "Web", "short_name": "Web", "tasks": [
+        {
+        "id": 11, 
+        "row": 0,
+        "name": "Mess of Hash", 
+        "score": "50",
+        "flag": "IW{T4K3_C4RE_AND_C0MP4R3}",
+        "desc": "Students have developed a new admin login technique. I doubt that it's secure, but the hash isn't crackable. I don't know where the problem is... ",
+        "file": "web50.zip",
+        "service": "https://mess-of-hash.ctf.internetwache.org/"
+        },
+        {
+        "id": 12, 
+        "row": 1,
+        "name": "Replace with Grace", 
+        "score": "60",
+        "flag": "IW{R3Pl4c3_N0t_S4F3}",
+        "desc": "Regular expressions are pretty useful. Especially when you need to search and replace complex terms.",
+        "service": "https://replace-with-grace.ctf.internetwache.org/"
+        },
+        {
+        "id": 13, 
+        "row": 2,
+        "name": "The Secret Store", 
+        "score": "70",
+        "flag": "IW{TRUNCATION_IS_MY_FRIEND}",
+        "desc": "We all love secrets. Without them, our lives would be dull. A student wrote a secure secret store, however he was babbling about problems with the database. Maybe I shouldn't use the 'admin' account. Hint1: Account deletion is intentional. Hint2: I can't handle long usernames.",
+        "service": "https://the-secret-store.ctf.internetwache.org/"
+        },
+        {
+        "id": 14, 
+        "row": 3,
+        "name": "0ldsk00lBlog", 
+        "score": "80",
+        "flag": "IW{G1T_1S_4W3SOME}",
+        "desc": "I stumbled across this kinda oldskool blog. I bet it is unhackable, I mean, there's only static HTML.",
+        "service": "https://0ldsk00lblog.ctf.internetwache.org/"
+        },
+        {
+        "id": 15, 
+        "row": 4,
+        "name": "TexMaker", 
+        "score": "90",
+        "flag": "IW{L4T3x_IS_Tur1ng_c0mpl3te}",
+        "desc": "Creating and using coperate templates is sometimes really hard. Luckily, we have a webinterace for creating PDF files. Some people doubt it's secure, but I reviewed the whole code and did not find any flaws. ",
+        "service": "https://texmaker.ctf.internetwache.org"
+        }
+    ]},
+    {"id": 2, "name": "Reversing", "short_name": "Rev", "tasks": [
+        {
+        "id": 21, 
+        "row": 0,
+        "name": "SPIM", 
+        "score": "50",
+        "flag": "IW{M1P5_!S_FUN}",
+        "desc": "My friend keeps telling me, that real hackers speak assembly fluently. Are you a real hacker? Decode this string: \"IVyN5U3X)ZUMYCs\"",
+        "file": "rev50.zip"
+        },
+        {
+        "id": 22, 
+        "row": 1,
+        "name": "File Checker", 
+        "score": "60",
+        "flag": "IW{FILE_CHeCKa}",
+        "desc": "My friend sent me this file. He told that if I manage to reverse it, I'll have access to all his devices. My misfortune that I don't know anything about reversing :/",
+        "file": "rev60.zip"
+        },
+        {
+        "id": 23, 
+        "row": 2,
+        "name": "ServerfARM", 
+        "score": "70",
+        "flag": "IW{S.E.R.V.E.R>=F:A:R:M}",
+        "desc": "Someone handed me this and told me that to pass the exam, I have to extract a secret string. I know cheating is bad, but once does not count. So are you willing to help me?",
+        "file": "rev70.zip"
+        },
+        {
+        "id": 24, 
+        "row": 3,
+        "name": "Eso Tape", 
+        "score": "80",
+        "flag": "IW{ILOVETAPEBAGEL}",
+        "desc": "I once took a nap on my keyboard. I dreamed of a brand new language, but I could not decipher it nor get its meaning. Can you help me? Hint: Replace the spaces with either '{' or '}' in the solution. Hint: Interpreters don't help. Operations write to the current index.",
+        "file": "rev80.zip"
+        },
+        {
+        "id": 25, 
+        "row": 4,
+        "name": "The Cube", 
+        "score": "90",
+        "flag": "IW{3DRC3}",
+        "desc": "I really like Rubik's Cubes, so I created a challenge for you. I put the flag on the white tiles and scrambled the cube. Once you solved the cube, you'll know my secret.",
+        "file": "rev90.zip"
+        }
+    ]},
+    {"id": 4, "name": "Crypto", "short_name": "Crypto", "tasks": [
+        {
+        "id": 41, 
+        "row": 0,
+        "name": "Crypto-Pirat", 
+        "score": "50",
+        "flag": "IW{Arrr!_G00d_Pirate_you_are:)}",
+        "desc": "Did the East German Secret Police see a Pirat on the sky? Help me find out! Hint: We had 9 planets from 1930–2006... Hint2: Each planet has a number. (There's a table on a well-known website). After that you might be interested in ciphers used by the secret police.",
+        "file": "crypto50.zip"
+        },
+        {
+        "id": 42, 
+        "row": 1,
+        "name": "Oh Bob!", 
+        "score": "60",
+        "flag": "IW{WEAK_RSA_K3YS_4R3_SO_BAD!}",
+        "desc": "Alice wants to send Bob a confidential message. They both remember the crypto lecture about RSA. So Bob uses openssl to create key pairs. Finally, Alice encrypts the message with Bob's public keys and sends it to Bob. Clever Eve was able to intercept it. Can you help Eve to decrypt the message? ",
+        "file": "crypto60.zip"
+        },
+        {
+        "id": 43, 
+        "row": 2,
+        "name": "Hashdesigner", 
+        "score": "70",
+        "flag": "IW{FUCK_YOU_HASH_MY_ASS}",
+        "desc": "There was this student hash design contest. All submissions were crap, but had promised to use the winning algorithm for our important school safe. We hashed our password and got '00006800007d'. Brute force isn't effective anymore and the hash algorithm had to be collision-resistant, so we're good to go, aren't we?",
+        "file": "crypto70.zip",
+        "service": "188.166.133.53:10009"
+        },
+        {
+        "id": 44, 
+        "row": 3,
+        "name": "Procrastination", 
+        "score": "80",
+        "flag": "IW{DR0N3S_W1TH_PH0N3S}",
+        "desc": "Watching videos is fun! Hint: Stegano skills required.",
+        "file": "crypto80.zip",
+        "service": "https://procrastination.ctf.internetwache.org"
+        },
+        {
+        "id": 45, 
+        "row": 4,
+        "name": "Bank", 
+        "score": "90",
+        "flag": "IW{SHUT_UP_AND_T4K3_MY_M000NEYY}",
+        "desc": "Everyone knows that banks are insecure. This one super secure and only allows only 20 transactions per session. I always wanted a million on my account. ",
+        "file": "crypto90.zip",
+        "service": "188.166.133.53:10061"
+        }
+    ]},
+    {"id": 5, "name": "Code", "short_name": "Code", "tasks": [
+        {
+        "id": 51, 
+        "row": 0,
+        "name": "A numbers game", 
+        "score": "50",
+        "flag": "IW{M4TH_1S_34SY}",
+        "desc": "People either love or hate math. Do you love it? Prove it! You just need to solve a bunch of equations without a mistake.",
+        "service": "188.166.133.53:11027"
+        },
+        {
+        "id": 52, 
+        "row": 1,
+        "name": "It's Prime Time!", 
+        "score": "60",
+        "flag": "IW{Pr1m3s_4r3_!mp0rt4nt}",
+        "desc": "We all know that prime numbers are quite important in cryptography. Can you help me to find some?",
+        "service": "188.166.133.53:11059"
+        },
+        {
+        "id": 53, 
+        "row": 2,
+        "name": "A numbers game II", 
+        "score": "70",
+        "flag": "IW{Crypt0_c0d3}",
+        "desc": "Math is used in cryptography, but someone got this wrong. Can you still solve the equations? Hint: You need to encode your answers.",
+        "service": "188.166.133.53:11071",
+        "file": "code70.zip"
+        },
+        {
+        "id": 54, 
+        "row": 3,
+        "name": "Brute with Force", 
+        "score": "80",
+        "flag": "IW{M4N_Y0U_C4N_B3_BF_M4T3RiAL!}",
+        "desc": "People say, you're good at brute forcing... Have fun! Hint: You don't need to crack the 31. character (newline). Try to think of different (common) time representations. Hint2: Time is CET",
+        "service": "188.166.133.53:11117"
+        },
+        {
+        "id": 55, 
+        "row": 4,
+        "name": "Dark Forest", 
+        "score": "90",
+        "flag": "IW{10000101010101TR33}",
+        "desc": "Someone pre-ordered a forest and now I'm lost in it. There are a lot of binary trees in front and behind of me. Some are smaller or equal-sized than others. Can you help me to invert the path and find out of the forest? Hint: It's about (inverted) BSTs. Don't forget the spaces.",
+        "service": "188.166.133.53:11491"
+        }
+    ]},
+    {"id": 6, "name": "Exploit", "short_name": "Exp", "tasks": [
+        {
+        "id": 61, 
+        "row": 0,
+        "name": "Ruby's count", 
+        "score": "50",
+        "flag": "IW{RUBY_R3G3X_F41L}",
+        "desc": "Hi, my name is Ruby. I like converting characters into ascii values and then calculating the sum.",
+        "service": "188.166.133.53:12037"
+        }, {
+        "id": 62, 
+        "row": 1,
+        "name": "EquationSolver", 
+        "score": "60",
+        "flag": "IW{Y4Y_0verfl0w}",
+        "desc": "I created a program for an unsolveable equation system. My friend somehow forced it to solve the equations. Can you tell me how he did it?",
+        "service": "188.166.133.53:12049"
+        }, {
+        "id": 63, 
+        "row": 2,
+        "name": "FlagStore", 
+        "score": "70",
+        "flag": "IW{Y_U_NO_HAZ_FLAG}",
+        "desc": "Here's the ultimate flag store. Store and retrieve your flags whenever you want.",
+        "file": "exp70.zip",
+        "service": "188.166.133.53:12157"
+        }, {
+        "id": 64, 
+        "row": 3,
+        "name": "Remote Printer", 
+        "score": "80",
+        "flag": "IW{YVO_F0RmaTt3d_RMT_Pr1nT3R}",
+        "desc": "Printer are very very important for offices. Especially for remote printing. My boss told me to build a tool for that task.",
+        "file": "exp80.zip",
+        "service": "188.166.133.53:12377"
+        }, {
+        "id": 65, 
+        "row": 4,
+        "name": "Sh-ock", 
+        "score": "90",
+        "flag": "IW{Shocked-for-nothing!}",
+        "desc": "This is some kind of weird thing. I am sh-ocked.",
+        "service": "188.166.133.53:12589"
+        }
+    ]}
+]}

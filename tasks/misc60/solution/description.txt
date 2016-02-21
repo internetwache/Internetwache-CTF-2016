@@ -1,0 +1,5 @@
+Misc60: Quick Run
+===========
+Someone sent me a file with white and black rectangles. I don't know how to read it. Can you help me?
+
+File: misc60.zip

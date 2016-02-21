@@ -1,0 +1,14 @@
+<?php
+
+include "flag.php";
+
+$DBHOST="";
+$DBNAME="";
+$DBUSER="";
+$DBPW="";
+$ADMINPW="askdlksdjlajksdh768d768734685745kjhsdkfj";
+
+$DBCON = mysqli_init(); 
+mysqli_real_connect($DBCON, $DBHOST, $DBUSER, $DBPW, $DBNAME);
+
+?>

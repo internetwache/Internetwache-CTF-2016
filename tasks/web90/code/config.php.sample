@@ -1,0 +1,9 @@
+<?php
+include "flag.php";
+$PDFLATEX = "/usr/bin/pdflatex";
+$TEMPLATEDIR = __DIR__ . "/templates/";
+$TEMPLATES = array('blank', 'assignment3', 'essay');
+$COMPILEDIR = __DIR__ . "/compile/";
+$OUTPUTDIR = __DIR__ . "/pdf/";
+$DLURL = "http://" . $_SERVER['SERVER_NAME'] . "/pdf/";
+?>

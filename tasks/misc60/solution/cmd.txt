@@ -1,0 +1,4 @@
+for c in F l a g i s : I W "{" Q R _ C 0 D E S _ R U L 3 "}"
+                       echo $c | microqrcode | grep -v "Enter" | base64 >> /tmp/chal3.txt 
+                   end
+

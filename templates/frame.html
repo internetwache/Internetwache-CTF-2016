@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="full">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" 
+            type="text/css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/ctf.css') }}" 
+            type="text/css"/>
+        <script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js') }}" 
+            type='text/javascript'></script>
+        <title>{{ lang.frame.title }}</title>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">{{ lang.frame.toggle }}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">{{ lang.frame.title }}</a>
+            </div>
+            {% if not login %}
+            <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav">
+                <li><a href="/scoreboard">{{ lang.scoreboard.title }}</a></li>
+		<li><a href="/rules">{{ lang.about.rules }}</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="form" method="post">
+                <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
+                <div class="form-group">
+                  <input type="text" placeholder="User" class="form-control" name="user">
+                </div>
+                <div class="form-group">
+                  <input type="password" placeholder="Password" class="form-control" name="password">
+                </div>
+                <button formaction="/login" type="submit" class="btn btn-success">{{ lang.frame.login }}</button>
+                <a href="/register"><button type="button" class="btn btn-success">{{ lang.frame.register }}</button></a>
+              </form>
+            </div>
+            {% else %}
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="/tasks">{{ lang.tasks.title }}</a></li>
+                <li><a href="/scoreboard">{{ lang.scoreboard.title }}</a></li>
+		<li><a href="/rules">{{ lang.about.rules }}</a></li>
+              </ul>
+              <form class="white navbar-form navbar-right">
+                <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
+                {{ lang.frame.logged_in }} {{ user.username }} | <a href="/logout">{{ lang.frame.logout}}</a>
+              </form>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% include page %}
+        <div class="navbar-default navbar-fixed-bottom">
+          <div class="container">
+            <span class="pull-left"><a href="https://twitter.com/internetwache">@internetwache</a> | Start: {{ ctf_start }} | End: {{ ctf_stop }}</span>
+            <a href="https://github.com/balidani/tinyctf-platform" 
+            target="blank" class="pull-right">Based on TinyCTF</a>
+          </div>
+        </div>
+
+        <!-- Piwik -->
+        <script type="text/javascript">
+          var _paq = _paq || [];
+          _paq.push(["setCookieDomain", "*.ctf.internetwache.org"]);
+          _paq.push(["setDomains", ["*.ctf.internetwache.org"]]);
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u="//piwik.neef.it/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 11]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+          })();
+        </script>
+        <noscript><p><img src="//piwik.neef.it/piwik.php?idsite=11" style="border:0;" alt="" /></p></noscript>
+        <!-- End Piwik Code -->
+
+    </body>
+</html>
