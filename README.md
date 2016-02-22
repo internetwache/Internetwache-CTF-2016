@@ -15,7 +15,7 @@ The Internetwache CTF 2016 repository. This repository contains all files, tools
 
 # Scoreboard
 
-The scoreboard is based on the tinyctf-platform. Check the ```README.tinyctf.md``` for more information.
+The scoreboard is based on the tinyctf-platform. Check the ```README.tinyctf.md``` and ```LICENSE.tinyctf.md``` for more information.
 
 # Directory structure
 
