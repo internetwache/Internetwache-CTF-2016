@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/home/exp60"
+USER="exp60"
+cd $HOME
+exec 2>&1
+exec setuidgid exp60 /usr/local/bin/tcpserver -H -R -c 500 -u exp60 0 12049 ./EquationSolver

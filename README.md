@@ -39,14 +39,45 @@ The most interesting directory is ```tasks/```:
 
 # Other files:
 
-- ```checkservice.py```: 	A small python script/plugin for the collectd monitoring system. Checks the availability of the services.
-- ```createzips.sh```:	Bundles every ```tasks/<challenge>/task/``` directory into a ```static/files/<challenge>.zip```
-- ```pkiller.py```:		Dirty workaround script to kill long-living apache-mpm-itk subprocesses (spawned by RCE challenges)
-- ```tasks.md```:			An overview over all challenges' name, flag, url, ip, port.
+- ```tasks/checkservice.py```
+
+A small python script/plugin for the collectd monitoring system. Checks the availability of the services.
+
+- ```tasks/createzips.sh```
+
+Bundles every ```tasks/<challenge>/task/``` directory into a ```static/files/<challenge>.zip```
+
+- ```tasks/pkiller.py```
+
+Dirty workaround script to kill long-living apache-mpm-itk subprocesses (spawned by RCE challenges)
+
+- ```tasks/tasks.md```
+
+An overview over all challenges' name, flag, url, ip, port.
+
+- ```configs/etc/cgconfig.conf```
+
+Configuration file for Cgroups. The group ```ctf``` had limited I/O, memory and CPU shares. 
+
+- ```configs/etc/cgrules.conf```
+
+Configuration file for Cgroups. Assigns the rule groups to system groups.
+
+- ```configs/etc/iptables/```
+
+Iptables rules for the VMs.
+
+- ```configs/etc/nginx/```
+
+Nginx config for load balancing HTTP and TCP services.
+
+- ```configs/etc/service/```
+
+Daemontools services for all challenges/tools.
 
 # Hosting details:
 
-- 4 VMs from Digitalocean.com in AMS3 datacenter 
+- 4 VMs from Digitalocean.com in AMS3 datacenter, based on Debian 8 x64, private networking enabled
 	- 1x 1 Core, 512 mb, 20GB, 0.007$/h Box as monitor
 	- 1x 4 Core, 8 gb, 80gb, 0.119$/h Box as proxy (load balancer)
 		- nginx load balancer: HTTP to web1 / TCP to serv1
@@ -62,6 +93,8 @@ The most interesting directory is ```tasks/```:
 		- Pro: Easy scalable by spawning new VMs
 		- Pro: Bad attackers easily stoppable on the proxy
 		- Contra: Single point of failure (Proxy)
+	- All challenges ran as a separate user
+	- All users were in the ```ctf``` group
 	- Used [Daemontools](http://cr.yp.to/daemontools.html) to easily control services
 	- Used [TCPServer](http://cr.yp.to/ucspi-tcp/tcpserver.html) to provide tcp connection for executable and scripts.
 	- Used [CGroups](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html) to limit service-users resources

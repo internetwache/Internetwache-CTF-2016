@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/home/exp50"
+USER="exp50"
+cd $HOME
+exec 2>&1
+exec setuidgid exp50 ruby exp50.rb 

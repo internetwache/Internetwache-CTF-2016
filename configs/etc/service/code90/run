@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/home/code90"
+USER="code90"
+cd $HOME
+exec 2>&1
+exec setuidgid code90 python2 code90.py

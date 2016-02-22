@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/root"
+USER="root"
+cd $HOME
+exec 2>&1
+exec setuidgid root python2 pkiller.py

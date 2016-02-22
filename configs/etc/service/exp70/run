@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/home/exp70"
+USER="exp70"
+cd $HOME
+exec 2>&1
+exec setuidgid exp70 /usr/local/bin/tcpserver -H -R -c 500 -u exp70 0 12157 ./FlagStore

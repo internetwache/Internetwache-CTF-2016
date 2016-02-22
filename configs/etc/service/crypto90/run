@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/home/crypto90"
+USER="crypto90"
+cd $HOME
+exec 2>&1
+exec setuidgid crypto90 /usr/local/bin/tcpserver -H -R -c 500 -u crypto90 0 10061 python2 -u bank.py

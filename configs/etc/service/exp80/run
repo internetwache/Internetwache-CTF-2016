@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/home/exp80"
+USER="exp80"
+cd $HOME
+exec 2>&1
+exec setuidgid exp80 /usr/local/bin/tcpserver -H -R -c 500 -u exp80 0 12377 ./RemotePrinter

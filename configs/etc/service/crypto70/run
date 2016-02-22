@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/home/crypto70"
+USER="crypto70"
+cd $HOME
+exec 2>&1
+exec setuidgid crypto70 /usr/local/bin/tcpserver -H -R -c 500 -u crypto70 0 10009 python2 -u myhash.py

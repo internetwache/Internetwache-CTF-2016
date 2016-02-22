@@ -1,0 +1,6 @@
+#!/bin/bash
+HOME="/home/user"
+USER="user"
+cd $HOME
+exec 2>&1
+exec setuidgid user /usr/local/bin/tcpserver -H -R -c 500 -u user 0 PORT PROG
