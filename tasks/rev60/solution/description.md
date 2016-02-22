@@ -4,3 +4,7 @@ My friend sent me this file. He told that if I manage to reverse it, I'll have a
 
 
 FILE: rev60.zip
+
+Compilation:
+gcc -m64 filechecker.c -o filechecker
+strip filechecker
