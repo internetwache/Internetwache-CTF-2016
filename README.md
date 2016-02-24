@@ -1,7 +1,7 @@
 Internetwache CTF 2016 
 ======================================
 
-The Internetwache CTF 2016 repository. This repository contains all files, tools and notes which were used to build and host the CTF. 
+This is the Internetwache CTF 2016 repository. It contains all files, tools and notes which were used to build and host the CTF. 
 The ```ctf.db``` contains the final scoreboard information. 
 
 # CTF Details
@@ -18,23 +18,23 @@ The ```ctf.db``` contains the final scoreboard information.
 
 # Scoreboard
 
-The scoreboard is based on the tinyctf-platform. Check the ```README.tinyctf.md``` and ```LICENSE.tinyctf.md``` for more information.
+The scoreboard is based on the [tinyctf-platform](https://github.com/balidani/tinyctf-platform). Check the ```README.tinyctf.md``` and ```LICENSE.tinyctf.md``` for more information. You can find our modified fork here: <https://github.com/internetwache/tinyctf-platform>
 
 # Directory structure
 
-The most interesting directory is ```tasks/```:
+The ```tasks/``` directory contains information about all challenges:
 
 ```
-├── tasks 							//	Directory with all tasks
-│   ├── challengeXY					//	Directory for a challenge
-│   │   ├── code 					//	Directory for serverside code
-│   │   │   ├── service.py 			//	Service for this challenge
-│   │   │   └── flag.py 			//	File with flag
-│   │   ├── solution 				//	Directory for public information
-│   │   │   ├── description.md 		//	Name and description of challenge
-│   │   │   └── flag.txt 			//	Flag of challenge
-│   │   └── task 					//	Directory with files for download
-│   │       └── README.txt 			// 	File with challenge hints/code
+├── tasks 							//	Contains all tasks
+│   ├── challengeXY					//	Every challenge has a separate directory
+│   │   ├── code 						//	Directory with serverside code
+│   │   │   ├── service.py 			//	Service
+│   │   │   └── flag.py 				//	File with flag
+│   │   ├── solution 					//	Directory with public information
+│   │   │   ├── description.md 		//	Name and description
+│   │   │   └── flag.txt 				//	Flag
+│   │   └── task 						//	Directory with resources for download
+│   │       └── README.txt 			// 	File with challenge hints or code
 ```
 
 # Other files:
@@ -53,7 +53,7 @@ Dirty workaround script to kill long-living apache-mpm-itk subprocesses (spawned
 
 - ```tasks/tasks.md```
 
-An overview over all challenges' name, flag, url, ip, port.
+An overview over all challenges' names, flags, urls, ips, ports.
 
 - ```configs/etc/cgconfig.conf```
 
@@ -78,25 +78,26 @@ Daemontools services for all challenges/tools.
 # Hosting details:
 
 - 4 VMs from Digitalocean.com in AMS3 datacenter, based on Debian 8 x64, private networking enabled
-	- 1x 1 Core, 512 mb, 20GB, 0.007$/h Box as monitor
-	- 1x 4 Core, 8 gb, 80gb, 0.119$/h Box as proxy (load balancer)
+	- 1x 1 Core, 512 mb, 20GB, 0.007$/h VM as monitor
+	- 1x 4 Core, 8 gb, 80gb, 0.119$/h VM as proxy (load balancer)
 		- nginx load balancer: HTTP to web1 / TCP to serv1
-	- 1x 4 Core, 8 gb, 80gb, 0.119$/h Box as web1 backend
+	- 1x 4 Core, 8 gb, 80gb, 0.119$/h VM as web1 backend
 		- web50, web60, web70, web80, web90, crypto80 challenges
-	- 1x 4 Core, 8 gb, 80gb, 0.119$/h Box as serv1 backend [ASLR disabled]
+	- 1x 4 Core, 8 gb, 80gb, 0.119$/h VM as serv1 backend [ASLR disabled]
 		- crypto70, crypto90, code50, code60, code70, code80, code90, exp50, exp60, exp70, exp80, exp90 challenges
 	- 1x Floating IP pointing to proxy
+	- Costs for hosting: ~20$
 
 - Setup:
-	- Monitor ==> Priv. Network to proxy / web1 / serv1
-	- Internet ==> proxy ==> Priv. Network to web1 / serv1
-		- Pro: Easy scalable by spawning new VMs
-		- Pro: Bad attackers easily stoppable on the proxy
-		- Contra: Single point of failure (Proxy)
+	- Monitor ==> priv. network to proxy / web1 / serv1
+	- Internet ==> proxy ==> priv. network to web1 / serv1
+		- Pro: Easy to scale by spawning new VMs
+		- Pro: Malicious attackers can be stopped on the proxy
+		- Contra: Proxy is single point of failure
 	- All challenges ran as a separate user
 	- All users were in the ```ctf``` group
-	- Used [Daemontools](http://cr.yp.to/daemontools.html) to easily control services
-	- Used [TCPServer](http://cr.yp.to/ucspi-tcp/tcpserver.html) to provide tcp connection for executable and scripts.
-	- Used [CGroups](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html) to limit service-users resources
-	- Used [Collectd](https://collectd.org/) with [CGP frontend](https://github.com/pommi/CGP) for monitoring the VMs
+	- Used [Daemontools](http://cr.yp.to/daemontools.html) to control services
+	- Used [TCPServer](http://cr.yp.to/ucspi-tcp/tcpserver.html) to provide tcp connections for executables and scripts.
+	- Used [CGroups](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html) to limit resources of users from the ```ctf``` group
+	- Used [Collectd](https://collectd.org/) with [CGP frontend](https://github.com/pommi/CGP) to monitor all VMs
 	- Used [Let's encrypt](https://letsencrypt.org/) for SSL certificates
