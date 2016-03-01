@@ -15,6 +15,7 @@ The ```ctf.db``` contains the final scoreboard information.
 - IRC: [#iwctf @ freenode.net](https://webchat.freenode.net/?channels=%23iwctf)
 - Writeups: [Ctftime.org](https://ctftime.org/event/290/tasks/) or [CTF writeups](https://github.com/ctfs/write-ups-2016/tree/master/internetwache-ctf-2016)
 - Prizes: None
+- Blogpost: <https://en.internetwache.org/internetwache-ctf-2016-review-01-03-2016/>
 
 # Scoreboard
 
