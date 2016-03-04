@@ -76,6 +76,10 @@ Nginx config for load balancing HTTP and TCP services.
 
 Daemontools services for all challenges/tools.
 
+- ```logs/```
+
+[RRD](http://oss.oetiker.ch/rrdtool/) logs created by [Collectd](https://collectd.org/) on the monitor VM. 
+
 # Hosting details:
 
 - 4 VMs from Digitalocean.com in AMS3 datacenter, based on Debian 8 x64, private networking enabled
